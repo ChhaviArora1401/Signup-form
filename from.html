@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* ----------COLORS--------- */
+:root {
+  --red: hsl(0, 100%, 74%);
+  --green: hsl(154, 59%, 51%);
+  --blue: hsl(248, 32%, 49%);
+  --dark-blue: hsl(249, 10%, 26%);
+  --grayish-blue: hsl(246, 25%, 77%);
+}
+/* ----------PAGE--------- */
+body {
+  font-size: 1rem;
+  font-family: "Poppins", sans-serif;
+
+  background-color: var(--red);
+  background-image: url(/images/bg-intro-desktop.png);
+
+  height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+main {
+  max-width: 1000px;
+  width: 100%;
+  /* height: 30vh; */
+  display: flex;
+}
+
+section {
+  flex: 1;
+}
+
+.content {
+  padding: 0 5%;
+  color: #fff;
+
+  display: flex;
+
+  justify-content: center;
+  flex-direction: column;
+}
+
+.content h1 {
+  font-size: 2.5rem;
+  line-height: 1.1;
+  margin-bottom: 6%;
+}
+
+.content p {
+  font-size: 0.8rem;
+}
+
+.signature {
+  margin-right: 2%;
+}
+
+aside {
+  color: var(--grayish-blue);
+  font-size: 0.8rem;
+  background-color: var(--blue);
+  border-radius: 8px;
+  padding: 3%;
+  margin-bottom: 5%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  -webkit-box-shadow: 0px 6px 0px 0px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0px 6px 0px 0px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 6px 0px 0px rgba(0, 0, 0, 0.2);
+}
+
+aside span {
+  color: #fff;
+  font-weight: 500;
+}
+
+form {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 6%;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 0px;
+}
+
+button {
+  width: 100%;
+  border: 0;
+  border-radius: 8px;
+  padding: 4%;
+  color: #fff;
+  cursor: pointer;
+  text-transform: uppercase;
+  background-color: var(--green);
+  margin-bottom: 3%;
+
+  -webkit-box-shadow: 0px 2px 0px 0px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: 0px 2px 0px 0px rgba(0, 0, 0, 0.4);
+  box-shadow: 0px 2px 0px 0px rgba(0, 0, 0, 0.4);
+}
+
+form p {
+  text-align: center;
+  font-size: 0.6rem;
+  color: var(--grayish-blue);
+}
+
+form p span {
+  font-weight: 700;
+  color: var(--red);
+}
+
+footer {
+  color: var(--grayish-blue);
+  margin: 1%;
+  font-size: 0.6rem;
+  text-transform: uppercase;
+}
+footer a {
+  color: var(--grayish-blue);
+  text-decoration: none;
+}
+footer a:hover {
+  color: var(--dark-blue);
+}
+
+/* FORM */
+
+form input {
+  width: 100%;
+  padding: 3%;
+  border-radius: 4px;
+  border: 1px solid var(--grayish-blue);
+}
+
+input::-webkit-input-placeholder {
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: var(--dark-blue);
+}
+
+.form-control {
+  position: relative;
+  margin-bottom: 4%;
+}
+
+.form-control img {
+  width: 24px;
+  position: absolute;
+  right: 20px;
+  bottom: 33px;
+  visibility: hidden;
+}
+
+small {
+  font-style: italic;
+  font-weight: 500;
+  font-size: 0.6rem;
+  color: var(--red);
+}
+
+.form-control small {
+  visibility: hidden;
+}
+
+.form-control.error small {
+  visibility: visible;
+}
+
+.form-control.sucess input {
+  border-color: var(--green);
+}
+
+.form-control.error input {
+  border-color: var(--red);
+}
+
+.form-control.sucess img.fa-check-circle {
+  visibility: visible;
+  top: 8px;
+}
+
+.form-control.error img.fa-exclamation-circle {
+  visibility: visible;
+}
+
+@media only screen and (max-width: 768px) {
+  body {
+    background-image: url(/images/bg-intro-mobile.png);
+    height: auto;
+  }
+  main {
+    max-width: 375px;
+    width: 100%;
+    flex-direction: column;
+  }
+  .content {
+    padding: 0;
+    text-align: center;
+    align-items: center;
+  }
+  .content h1 {
+    width: 85%;
+    margin: 15% 0 3% 0;
+    font-size: 1.5rem;
+  }
+  .content p {
+    width: 70%;
+    font-size: 0.8rem;
+  }
+  .signature {
+    margin-right: 0;
+    margin: 0 5% 10% 5%;
+  }
+  aside {
+    margin-top: 15%;
+    text-align: center;
+    padding: 5%;
+  }
+  aside p {
+    width: 60%;
+  }
+  form {
+    padding: 8%;
+  }
+  form input {
+    padding: 6%;
+  }
+  button {
+    padding: 5%;
+    font-size: 0.8rem;
+  }
+  form p {
+    margin: 0 auto;
+    width: 85%;
+    text-align: center;
+    line-height: 2;
+  }
+  .form-control.sucess img.fa-check-circle {
+    top: 13px;
+  }
+  .form-control img {
+    bottom: 38px;
+  }
+}
+
+</style>
+<body>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Frontend Mentor | Intro component with sign up form</title>
+  
+  </head>
+  <body>
+    <main>
+      <section class="content">
+        <h1>Learn to code by watching others</h1>
+        <p>
+          See how experienced developers solve problems in real-time. Watching
+          scripted tutorials is great, but understanding how developers think is
+          invaluable.
+        </p>
+      </section>
+      <section class="signature">
+        <aside>
+          <p><span>Try it free 7 days</span> then $20/mo. thereafter</p>
+        </aside>
+
+        <form class="form" id="form">
+          <div class="form-control" id="form-control">
+            <input
+              type="text"
+              id="firstname"
+              name="registerName"
+              placeholder="   First Name"
+            />
+            <img
+              class="fas fa-check-circle"
+              src="images/ico-check.svg"
+              alt=""
+            />
+            <img
+              class="fas fa-exclamation-circle"
+              src="images/icon-error.svg"
+              alt=""
+            />
+            <small></small>
+          </div>
+
+          <div class="form-control">
+            <input
+              type="text"
+              id="lastname"
+              name="registerLastname"
+              placeholder="   Last Name"
+            />
+            <img
+              class="fas fa-check-circle"
+              src="images/ico-check.svg"
+              alt=""
+            />
+            <img
+              class="fas fa-exclamation-circle"
+              src="images/icon-error.svg"
+              alt=""
+            />
+            <small></small>
+          </div>
+
+          <div class="form-control">
+            <input
+              type="email"
+              id="mail"
+              name="registerEmail"
+              placeholder="   Email Address"
+            />
+            <img
+              class="fas fa-check-circle"
+              src="images/ico-check.svg"
+              alt=""
+            />
+            <img
+              class="fas fa-exclamation-circle"
+              src="images/icon-error.svg"
+              alt=""
+            />
+            <small></small>
+          </div>
+
+          <div class="form-control">
+            <input
+              type="password"
+              id="password"
+              name="registerPassword"
+              placeholder="   Password"
+            />
+            <img
+              class="fas fa-check-circle"
+              src="images/ico-check.svg"
+              alt=""
+            />
+            <img
+              class="fas fa-exclamation-circle"
+              src="images/icon-error.svg"
+              alt=""
+            />
+            <small>Password cannot be empty</small>
+          </div>
+
+          <div class="button">
+            <button type="submit" class="submit" id="submit">
+              Claim your free trial
+            </button>
+          </div>
+          <div>
+            <p>
+              By clicking the button, you are agreeing to our
+              <span>Terms and Services</span>
+            </p>
+          </div>
+        </form>
+      </section>
+    </main>
+    <footer>
+      <p class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by
+        <a href="https://github.com/ananegridev/">ANA PAULA NEGRI</a>.
+      </p>
+    </footer>
+  </body>
+</html>
+
+
+    <script>
+        //Search the Page Elements and Add them to variables
+
+const form = document.getElementById("form");
+const firstname = document.getElementById("firstname");
+const lastname = document.getElementById("lastname");
+const email = document.getElementById("mail");
+const password = document.getElementById("password");
+
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+  chekckInputs();
+});
+
+function chekckInputs() {
+  //get the values from the inputs
+  const firstnameValue = firstname.value.trim();
+  const lastnameValue = lastname.value.trim();
+  const emailValue = email.value.trim();
+  const passwordValue = password.value.trim();
+
+  // FIRST NAME
+  if (firstnameValue === "") {
+    //show error
+    // add errpr class
+    setErrorFor(firstname, "First Name cannot be empty");
+  } else {
+    // add sucess class
+    setSucessFor(firstname);
+  }
+
+  //LAST NAME
+  if (lastnameValue === "") {
+    //show error
+    // add errpr class
+    setErrorFor(lastname, "Last Name cannot be empty");
+  } else {
+    // add sucess class
+    setSucessFor(lastname);
+  }
+
+  // EMAIL
+  if (emailValue === "") {
+    setErrorFor(email, "Email cannot be empty");
+  } else if (!isEmail(emailValue)) {
+    setErrorFor(email, "Looks like this is not an email");
+  } else {
+    setSucessFor(email);
+  }
+
+  //PASSWORD
+  if (passwordValue === "") {
+    //show error
+    // add errpr class
+    setErrorFor(password, "Password cannot be empty");
+  } else {
+    // add sucess class
+    setSucessFor(password);
+  }
+
+  //SHOW A SUCESS MESSAGE
+}
+
+function setErrorFor(input, message) {
+  const formControl = input.parentElement; //.form-control
+  const small = formControl.querySelector("small");
+  //add error message inside small
+  small.innerText = message;
+  //add error class
+  formControl.className = "form-control error";
+}
+
+function setSucessFor(input) {
+  const formControl = input.parentElement; //.form-control
+  formControl.className = "form-control sucess";
+}
+
+function isEmail(email) {
+  return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(
+    email
+  );
+}
+
+    </script>
+</body>
+</html>

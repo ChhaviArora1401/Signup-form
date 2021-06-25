@@ -31,7 +31,7 @@ h1{
 }
 
 #tab{
-    margin-top: 3%;
+    margin-bottom: 3%;
     margin-left: 2%;
     display: flex;
     flex: auto;
@@ -45,33 +45,120 @@ h1{
     font-size: 12px;
     border-radius: 5px;
     text-align: center;
+    box-shadow: 0px 7px hsl(249deg 10% 26% / 25%);
+    margin-bottom: 4%;
 }
 
-form{
+form input {
+    border: 1px solid hsl(246, 25%, 77%);
+}
+
+.form {
     padding: 8% 8% 8% 8%;
     display: flex;
     flex-direction: column;
     background-color: white;
     border-radius: 7px;
+    box-shadow: 0px 7px hsl(249deg 10% 26% / 25%);
 }
 
-form input{
+#firstname{
+    padding: 3%;
+    color: hsl(246, 25%, 77%);
+    font-weight: bold;    
+    border-radius: 5px;
+    margin-bottom: 3%;
+    width: 93%;
+}
+
+#lastname{
     padding: 3%;
     color: hsl(246, 25%, 77%);
     font-weight: bold;
-    border: 1px solid hsl(246, 25%, 77%);
     border-radius: 5px;
+    margin-bottom: 3%;
+    width: 93%;
 }
 
-#button1
+#mail{
+    padding: 3%;
+    color: hsl(246, 25%, 77%);
+    font-weight: bold;
+    border-radius: 5px;
+    margin-bottom: 3%;
+    width: 93%;
+}
+
+#password{
+    padding: 3%;
+    color: hsl(246, 25%, 77%);
+    font-weight: bold;
+    border-radius: 5px;
+    margin-bottom: 3%;
+    width: 93%;
+}
+
+form img {
+    position: absolute;
+    margin-left: -2%;
+    margin-top: 0.5%;
+}
+
+.form-control img {
+    width: 24px;
+    position: absolute;
+    visibility: hidden;
+}
+
+small {
+    font-style: italic;
+    font-weight: 500;
+    font-size: 0.6rem;
+    color: red;
+    float: right;
+    margin-right: 3%;
+    margin-top: -3%;
+    margin-bottom: 4%;
+}
+
+.form-control small {
+  visibility: hidden;
+}
+
+.form-control.error small {
+  visibility: visible;
+}
+
+.form-control.sucess input {
+  border-color: green;
+}
+
+.form-control.error input {
+  border-color: red;
+  color: red;
+}
+
+.form-control.sucess img.fa-check-circle {
+  visibility: visible;
+  top: 8px;
+}
+
+.form-control.error img.fa-exclamation-circle {
+  visibility: visible;
+}
+
+.submit
 {
     background-color: hsl(154, 59%, 51%);
     color: white;
     font-size: 16px;
+    width: 100%;
     border: none;
     border-radius: 5px;
     box-shadow: #000;
+    margin-bottom: 3%;
     padding: 4%;
+    box-shadow: 0px 2px 0px 0px rgba(0, 0, 0, 0.4);
 }
 
 #last-text{
@@ -188,6 +275,5 @@ form input{
     
     #red-text{
         color: hsl(0, 100%, 74%);
-    }
-        
+    }        
 }

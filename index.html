@@ -40,15 +40,92 @@
         <span id="blue-text">Try it free 7 days <span id="no-bold">&nbsp;then </span> </span> $20/mo. thereafter
       </div>
       <br>
-      <form>
-        <input type="text" placeholder="First Name" name="uname" onclick="myFunction()" required>
-        <input type="text" style="margin-top: 6%;" placeholder="Last Name" required>
-        <input type="text" style="margin-top: 6%;" placeholder="Email Address" placeholder="john@example.com" required>
-        <input type="password" style="margin-top: 6%;" placeholder="Password" name="psw" required>
+      <form class="form" id="form">
+          <div class="form-control" id="form-control">
+            <input
+              type="text"
+              id="firstname"
+              name="registerName"
+              placeholder="   First Name"
+            />
+            <img
+              class="fas fa-check-circle"
+              src="images/ico-check.svg"
+              alt=""
+            />
+            <img
+              class="fas fa-exclamation-circle"
+              src="images/icon-error.svg"
+              alt=""
+            />
+            <small></small>
+          </div>
 
-        <br>
-        <button id="button1"> CLAIM YOUR FREE TRIAL </button>
-        <br>
+          <div class="form-control" id="form-control">
+            <input
+              type="text"
+              id="lastname"
+              name="registerLastname"
+              placeholder="   Last Name"
+            />
+            <img
+              class="fas fa-check-circle"
+              src="images/ico-check.svg"
+              alt=""
+            />
+            <img
+              class="fas fa-exclamation-circle"
+              src="images/icon-error.svg"
+              alt=""
+            />
+            <small></small>
+          </div>
+
+          <div class="form-control" id="form-control">
+            <input
+              type="email"
+              id="mail"
+              name="registerEmail"
+              placeholder="   Email Address"
+            />
+            <img
+              class="fas fa-check-circle"
+              src="images/ico-check.svg"
+              alt=""
+            />
+            <img
+              class="fas fa-exclamation-circle"
+              src="images/icon-error.svg"
+              alt=""
+            />
+            <small></small>
+          </div>
+
+          <div class="form-control" id="form-control">
+            <input
+              type="password"
+              id="password"
+              name="registerPassword"
+              placeholder="   Password"
+            />
+            <img
+              class="fas fa-check-circle"
+              src="images/ico-check.svg"
+              alt=""
+            />
+            <img
+              class="fas fa-exclamation-circle"
+              src="images/icon-error.svg"
+              alt=""
+            />
+            <small></small>
+          </div>
+
+          <div class="button">
+            <button type="submit" class="submit" id="submit">
+              Claim your free trial
+            </button>
+          </div>
         <div id="last-text">By clicking the button, you are agreeing to our <span id="red-text">Terms and
             Services</span></div>
 
@@ -64,5 +141,4 @@
  
   <script src="script.js"></script>
 </body>
-
 </html>
